@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="76dp"
+        android:padding="8dp"
+        android:background="@drawable/white_tile"
+        android:elevation="1dp"
+        android:translationZ="1dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/adlogo"
+            android:id="@+id/map_hint_place_image"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="68dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Название места"
+                android:textSize="18sp"
+                android:id="@+id/map_hint_place_title"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorAppDarkGray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="36dp"
+                android:id="@+id/map_hint_place_description"
+                android:text="Длинное и подробное описание места, что там есть и как дойти"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

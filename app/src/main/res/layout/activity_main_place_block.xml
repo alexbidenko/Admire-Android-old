@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_tile"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/adlogo"
+            android:scaleType="centerCrop"
+            android:id="@+id/main_block_place_image"
+            android:background="@drawable/light_gray_tile"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:text="Название места"
+                android:textSize="18sp"
+                android:id="@+id/main_block_place_title"
+                android:layout_marginRight="34dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/colorAppDarkGray"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="36dp"
+                android:id="@+id/main_block_place_description"
+                android:text="Длинное и подробное описание места, что там есть и как дойти"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/main_block_place_to_location"
+            style="@style/Widget.AppCompat.ActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="160dp"
+            android:layout_marginEnd="0dp"
+            android:src="@drawable/ic_location_on_black_24dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

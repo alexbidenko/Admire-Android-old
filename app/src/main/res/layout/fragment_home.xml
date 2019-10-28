@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_scroll">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorAppLightGrayTile">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/colorAppDarkGray"
+                    android:elevation="4dp"
+                    android:translationZ="4dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/main_search_back"/>
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_margin="8dp"
+                            android:src="@drawable/ic_search_white_24dp"/>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="44dp"
+                            android:layout_marginRight="16dp"
+                            android:textColor="@color/colorAppWhite"
+                            android:id="@+id/home_search_text"
+                            android:singleLine="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorAppDarkGray"
+                        android:layout_marginBottom="100dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorAppWhite" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="22sp"
+                            android:textColor="@color/colorAppWhite"
+                            android:text="Случайное место"
+                            android:layout_margin="8dp"/>
+
+                        <ImageButton
+                            style="@style/Widget.AppCompat.ActionButton.CloseMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="0dp"
+                            android:src="@drawable/ic_autorenew_white_24dp"
+                            android:id="@+id/home_random_place_button"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="104dp"
+                        android:padding="8dp"
+                        android:id="@+id/home_random_place_layout"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorAppWhite"/>
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerCrop"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/home_random_place_image"
+                            android:onClick="ToLocation"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="24sp"
+                            android:layout_marginLeft="88dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/home_random_place_title"
+                            android:textColor="@color/colorAppWhite"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="34dp"
+                            android:layout_marginLeft="88dp"
+                            android:background="@color/colorAppWhite"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="88dp"
+                            android:layout_marginTop="36dp"
+                            android:id="@+id/home_random_place_description"
+                            android:textColor="@color/colorAppWhite"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/home_all_places"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/home_fixed_title"
+            android:elevation="4dp"
+            android:translationZ="4dp"
+            android:paddingTop="60dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="52sp"
+                android:id="@+id/home_app_name"
+                android:textFontWeight="500"
+                android:textColor="@color/colorAppWhite"
+                android:padding="8dp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

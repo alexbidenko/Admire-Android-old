@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="social.admire.admire">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FollowLocation"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".LocationNearNotify"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.REBOOT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.here.android.maps.appid"
+            android:value="NUcD6kPMyrQ4aC2g0Msx" />
+        <meta-data
+            android:name="com.here.android.maps.apptoken"
+            android:value="UqVXbGuDAeRC5Bf_LcF3hA" />
+        <meta-data
+            android:name="com.here.android.maps.license.key"
+            android:value="dKY3zQLkXdHyKzQ2zTcSFy7mRRYlI7d1oqQP/CMpAkBFZvAX6hzaYSQtlIHjiWY3oZ8Ln48N577lytTNq0/gT3MQ08LUYlfHvO3EfYHMt0s1yRSIPIQ+xlhU43wyyC7gQMuwF1jkbZGdlWahx68V68SEjINHPeyH9Z6CvOHVtfGdPwPyvz6J71yuch+D4YhtoZEycPqOClSXoTY4e3Z291hJVUIaxgY8qqEJLMg25IyIxi80fq1NkvHQOfG3QHC5sOhx5jCLlieVNxYmGoT7Kxfvjt3OhJqovwrJ7+pI6UVJoYEG+T627zq3uISWKFn9XeVmxfsRahXQob7uxiQJZhI7gUCGHcy06DVoSBy6dngKgGVpmrLM6/+0BhZ7W58BfliJZeEpuSVeu2mXtK8v3obqz/QNv3b5qFbYSb8bU42pLmQ0NPqX6+ez9RNOecZpOi/iUAOYUInD8AyFMAKPOKO1IdXlJ5x2vVbKxLCwVJ4nH4+PKd51ihPaopWsPw6wnhCEeyNSioLdqjp2wPWjs2m08ewr+vcpdRUk/pAorIyWIeA80HBK3eWAQx/xHXMjSi5iCWMpbLlq3N8XPnz7sgzfIKiW2SiiyJFs12K97a7LaVgXRaW31sPugRZsajKFkFKDUTlGzB0D7q4KYX0xoJvC0Vg5cb6Y7XmCaJLBumI=" />
+        <meta-data
+            android:name="INTENT_NAME"
+            android:value="social.admire.admire.MapService" />
+
+        <activity android:name=".MapActivity" />
+    </application>
+
+</manifest>
